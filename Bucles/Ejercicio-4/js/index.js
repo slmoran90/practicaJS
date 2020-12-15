@@ -6,7 +6,7 @@ do
 {
 	userNum = parseFloat(prompt('Número:'));
 
-	if(userNum == NaN) alert('El dato no es un número.');
+	if(isNaN(userNum)) alert('El dato no es un número.');
 	else accNums += userNum;
 
 }while(confirm(msg));
