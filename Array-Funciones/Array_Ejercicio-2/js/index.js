@@ -4,7 +4,10 @@ let len = 0;
 let i = 0;
 const msg = '¿Agregar otra ciudad?';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> array_ejercicio_2
 do
 {
 	citys.push(prompt('País / Ciudad:'));
@@ -27,8 +30,12 @@ len = citys.length;
 document.write(`<br><b>Logintud</b>: ${len}`);
 
 // MOSTRAR POSICIONES 1,2 Y ULTIMA
+<<<<<<< HEAD
 document.write(`<br><b>Posiciónes elementos 1, 2 y último</b>: ${citys[0]}, ${citys[1]} y ${citys[len-1]}`);
 
+=======
+document.write(`<br><b>Posiciónes elementos 1, 3 y último</b>: ${citys[0]}, ${citys[2]} y ${citys[len-1]}`);
+>>>>>>> array_ejercicio_2
 
 // AGREGAR PARIS COMO ULTIMO ELEMENTO
 citys.push('París');
