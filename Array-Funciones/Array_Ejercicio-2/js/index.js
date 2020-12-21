@@ -4,7 +4,6 @@ let len = 0;
 let i = 0;
 const msg = '¿Agregar otra ciudad?';
 
-
 do
 {
 	citys.push(prompt('País / Ciudad:'));
