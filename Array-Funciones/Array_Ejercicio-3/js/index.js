@@ -1,9 +1,9 @@
 let diceOne = 0, diceTwo = 0
 let k = 0;
 let diceSum = [];
-let numRepeat = [];
+let repeat = [];
 
-for(let i=0; i<15; i++)
+for(let i=0; i<50; i++)
 {
 	diceOne = Math.round(Math.random(i) * 6);
 	diceTwo = Math.round(Math.random(i) * 6);
@@ -11,4 +11,13 @@ for(let i=0; i<15; i++)
 	diceSum.push(diceOne + diceTwo);
 }
 
-document.write(diceSum.join(', ') + '<br>');
+for(let i=2; i<13; i++)
+{
+	for(let j=0; j<diceSum.length; j++)
+	{
+		if(i == diceSum[j]) k++;
+	}
+
+	if(k!=0) repeat.push(k);
+	k = 0;
+}
