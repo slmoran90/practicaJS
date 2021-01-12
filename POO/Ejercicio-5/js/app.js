@@ -1,6 +1,6 @@
 class Person
 {
-	constructor(name, age, sex, weight, height)
+	constructor(name, age, sex, weight, height, yearOfBirth)
 	{
 		this._name = name;
 		this._age = age;
@@ -8,35 +8,36 @@ class Person
 		this._sex = sex;
 		this._weight = weight;
 		this._height = height;
+		this._yearOfBirth = yearOfBirth;
 	}
 
 	showGeneration()
 	{
-		if(this._age>=11 && this._age<=27)
+		if(this._yearOfBirth>=1994 && this._yearOfBirth<=2010)
 		{
 			console.group('Generación Z');
 			console.log('Rasgo característico: Irreverencia');
 			console.groupEnd();
 		}
-		else if(this._age>=28 && this._age<=40)
+		else if(this._yearOfBirth>=1981 && this._yearOfBirth<=1993)
 		{
 			console.group('Generación Y (millennials)');
 			console.log('Rasgo característico: Frustración');
 			console.groupEnd();
 		}
-		else if(this._age>=41 && this._age<=52)
+		else if(this._yearOfBirth>=1969 && this._yearOfBirth<=1980)
 		{
 			console.group('Generación X');
 			console.log('Rasgo característico: Obsesión por el éxito');
 			console.groupEnd();
 		}
-		else if(this._age>=53 && this._age<=72)
+		else if(this._yearOfBirth>=1949 && this._yearOfBirth<=1968)
 		{
 			console.group('Generación Baby Boom');
 			console.log('Rasgo característico: Amición');
 			console.groupEnd();
 		}
-		else if(this._age>=73 && this._age<=91)
+		else if(this._yearOfBirth>=1930 && this._yearOfBirth<=1948)
 		{
 			console.group('Generación Silent Generation (Los niños de la posguerra)');
 			console.log('Rasgo característico: Austeridad');
@@ -68,6 +69,7 @@ class Person
 		* Nombre: ...
 		* Edad: ...
 		* DNI: ...
+		* Año de nacimiento: ...
 		* Sexo:...
 		* Peso: ...
 		* Altura: ...
