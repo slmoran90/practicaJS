@@ -80,16 +80,6 @@ class Phonebook extends Contact
 		}
 	}
 
-	fullBook()
-	{
-		let array = this._arr;
-
-		for(let i=0; i<array.length; i++)
-		{
-			if(array[i] == 10) return true;
-			else return false;
-		}
-	}
 
 	findContact(name)
 	{
@@ -114,6 +104,22 @@ class Phonebook extends Contact
 		}
 		else return false;
 	}
+
+	fullBook()
+	{
+		let array = this._arr;
+
+		if (array.length >= 10) return true;
+		else return false;
+	}
+
+
+}
+
+const menu = () =>
+{
+	let opc = 0;
+
 
 }
 
