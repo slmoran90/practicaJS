@@ -1,0 +1,23 @@
+body
+{
+	background-attachment: fixed;
+	background-image: url(../img/bg-foco.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main
+{
+	min-height: 100vh;
+}
+
+.text-shadow
+{
+	color: #fff;
+	text-shadow: 0 0 5px #aaa,
+				 0 0 10px #FFC107,
+				 0 0 15px #FFC107,
+				 0 0 20px #FFC107,
+				 0 0 25px #aaa;
+}
