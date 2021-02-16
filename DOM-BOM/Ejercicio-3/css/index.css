@@ -1,23 +1,103 @@
-body
+ /*#091921*/
+*
 {
-	background-attachment: fixed;
-	background-image: url(../img/bg-foco.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 main
 {
+	background: #091921;
 	min-height: 100vh;
 }
 
-.text-shadow
+.clock-container
 {
-	color: #fff;
-	text-shadow: 0 0 5px #aaa,
-				 0 0 10px #FFC107,
-				 0 0 15px #FFC107,
-				 0 0 20px #FFC107,
-				 0 0 25px #aaa;
+	background: #fff url(../img/clock.png);
+	background-size: cover;
+	border-radius: 50%;
+	border: 20px solid #fff;
+	box-shadow: inset 0 0 30px rgba(0, 0, 0, .3),
+				0 20px 20px rgba(0, 0, 0, .4),
+				0 0 0 4px rgba(255, 255, 255, 1);
+	height: 21.875rem;
+	width: 21.875rem;
 }
+
+.clock-container:before
+{
+	background: #848484;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	content: '';
+	height: 0.9375rem;
+	position: absolute;
+	width: 0.9375rem;
+	z-index: 100;
+}
+
+.hour,
+.minutes, 
+.seconds
+{
+	position: absolute;
+}
+
+.hour, .hs
+{
+	height: 10rem;
+	width: 10rem;
+}
+
+.minutes, .min
+{
+	height: 11.875rem;
+	width: 11.875rem;
+}
+
+.seconds, .sec
+{
+	height: 14.375rem;
+	width: 14.375rem;
+}
+
+.hs, .min, .sec
+{
+	position: absolute;
+}
+
+.hs:before
+{
+	background: #848484;
+	border-radius: 6px 6px 0 0;
+	content: '';
+	height: 4.85rem;
+	position: absolute;
+	width: 0.5rem;
+	z-index: 10;
+}
+
+.min:before
+{
+	background: #d6d6d6;
+	border-radius: 6px 6px 0 0;
+	content: '';
+	height: 5.625rem;
+	position: absolute;
+	width: 0.25rem;
+	z-index: 11;
+}
+
+.sec:before
+{
+	background: #ff6767;
+	border-radius: 6px 6px 0 0;
+	content: '';
+	height: 9.6875rem;
+	position: absolute;
+	width: 0.125rem;
+	z-index: 12;
+}
+

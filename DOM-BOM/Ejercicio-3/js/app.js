@@ -1,18 +1,21 @@
 const getDate = ()=>
 {
-	const date = new Date();
-	const h1Date = document.getElementById('date');
+	const deg = 6,
+		divHs = document.getElementById('hs'),
+		divMin = document.getElementById('min'),
+		divSec = document.getElementById('sec');
 
-	let hs = date.getHours(),
-		min = date.getMinutes(),
-		sec = date.getSeconds();
+	setInterval(()=>
+	{
+		let date = new Date(),
+			hs = date.getHours() * 30,
+			min = date.getMinutes() * deg,
+			sec = date.getSeconds() * deg;
 
-	if(hs < 10) hs = '0' + hs;
-	if(min < 10) min = '0' + min;
-	if(sec < 10) sec = '0' + sec;
-
-	if(hs>=0 && hs<12) h1Date.innerHTML = `${hs}:${min}:${sec} AM`;
-	else h1Date.innerHTML = `${hs}:${min}:${sec} PM`;
+		divHs.style.transform = `rotateZ(${hs+(min/12)}deg)`;
+		divMin.style.transform = `rotateZ(${min}deg)`;
+		divSec.style.transform = `rotateZ(${sec}deg)`;
+	})
 }
 
-setInterval(getDate, 1000); 
+getDate();
